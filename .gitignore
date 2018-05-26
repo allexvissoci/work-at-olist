@@ -6,5 +6,6 @@
 *.tmproj
 *.log
 .env
+/env/*
 tmp
 db.sqlite3
