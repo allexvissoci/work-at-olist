@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.conf.urls import url
 from rest_framework.routers import DefaultRouter
 from record.views import StartRecordView, EndRecordView
+from bill.views import BillView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -25,4 +26,5 @@ urlpatterns = [
 router = DefaultRouter()
 router.register(r'startrecord', StartRecordView, base_name='start_record')
 router.register(r'endrecord', EndRecordView, base_name='end_record')
+router.register(r'bill', BillView, base_name='bill')
 urlpatterns += router.urls

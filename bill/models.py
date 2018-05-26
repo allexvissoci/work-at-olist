@@ -12,4 +12,7 @@ class Bill(models.Model):
     call_price = models.DecimalField(max_digits=5, decimal_places=2, null=True)
 
     def __str__(self):
-        return self.call_start_record.source
+        params = [self.call_start_record.call_id,
+                  self.call_start_record.timestamp,
+                  self.call_end_record.timestamp]
+        return "call_id: {}, started at {} and ended at {}".format(*params)
