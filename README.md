@@ -12,28 +12,25 @@ The call details is the initial call record and the end call record.
 	Open the command line and run the next commands
 
 ```console
-	git clone git@github.com:allexvissoci/work-at-olist.git
+git clone git@github.com:allexvissoci/work-at-olist.git
 ```
 ```console
-	cd work-at-olist/
+cd work-at-olist/
 ```
 ```console
-	python3 -m venv env
+python3 -m venv env
 ```
 ```console
-	pip install -r requirements.txt
+source env/bin/activate
 ```
 ```console
-	source env/bin/activate
+pip install -r requirements.txt
 ```
 ```console
-	pip install -r requirement.txt
+python manage.py migrate
 ```
 ```console
-	python manage.py migrate
-```
-```console
-	python manage.py runserver
+python manage.py runserver
 ```
 
 ## Testing Instructions
