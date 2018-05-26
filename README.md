@@ -9,6 +9,13 @@ The call details is the initial call record and the end call record.
 
 ## Testing Instructions
 
+	In project root folder, run:
+
+```console
+	python manage.py test
+```
+
+
 ## Work Environment
 
 |   |    |
@@ -21,3 +28,31 @@ The call details is the initial call record and the end call record.
 |  djangorestframework | 3.8.2 |
 
 # API documentation
+
+## Create Call Records
+
+* Start Call Record:
+
+	`https://work-at-olist-call-api.herokuapp.com/startrecord/`
+
+```
+	{
+	  "type": "start",
+	  "timestamp": "2018-05-25T05:00",
+	  "call_id":  "1",
+	  "source":  "41999999984",
+	  "destination": "41999999983"
+	}
+```
+
+* End Call Record:
+
+	`https://work-at-olist-call-api.herokuapp.com/endrecord/`
+
+```
+	{
+	   "type": "end"
+	   "timestamp": "2018-05-25T05:00"
+	   "call_id": "1"
+	}
+```
